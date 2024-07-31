@@ -4,7 +4,6 @@ const depart = document.querySelector('#depart')
 const destination = document.querySelector('#destination')
 const nombre = document.querySelector('#nombre')
 const email = document.querySelector('#email')
-import axios from 'axios';
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = nom.value;
