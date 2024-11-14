@@ -370,7 +370,7 @@ Départ: ${start} <br>Destination: ${destinations} <br>Nombre: ${numbers} <br>Em
                 <tr>
                   <td class="content-block">
                     <span class="apple-link">Email de réservation</span>
-                    <br> <a href="https://taxistomarrakech.com/">www.taxistomarrakech.com</a>.
+                    <br> <a href="https://taxitoagafay.com/">www.taxitoagafay.com/</a>.
                   </td>
                 </tr>
               </table>
