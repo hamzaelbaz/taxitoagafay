@@ -8,7 +8,6 @@ exports.handler = async function (event, context) {
         const { name, start, destinations, numbers, emails, tele, dates } = requestBody;
 
         console.log('Email details:', { name, start, destinations, numbers, emails, tele, dates });
-
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -19,7 +18,7 @@ exports.handler = async function (event, context) {
 
         let message = {
             from: 'elbazhamzahb@gmail.com',
-            to: 'taxistomarrakech@gmail.com',
+            to: 'elbazhamza77@gmail.com',
             subject: 'Email de Reservation',
             text: 'Hello world?',
             html: `
