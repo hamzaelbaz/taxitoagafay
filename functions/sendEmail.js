@@ -5,9 +5,9 @@ exports.handler = async function (event, context) {
         const requestBody = JSON.parse(event.body);
         console.log('Parsed request body:', requestBody);
 
-        const { name, start, destinations, numbers, emails, tele, dates } = requestBody;
+        const { name, start, destinations, numbers, emails, tele, dates, messages } = requestBody;
 
-        console.log('Email details:', { name, start, destinations, numbers, emails, tele, dates });
+        console.log('Email details:', { name, start, destinations, numbers, emails, tele, dates, messages });
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -338,7 +338,7 @@ exports.handler = async function (event, context) {
                   <p>
 Voici les informations de réservation <br>
 Le nom: ${name} <br>
-Départ: ${start} <br>Destination: ${destinations} <br>Nombre: ${numbers} <br> Tele:${tele} <br> Date et Heure:${dates} <br>  Email: ${emails} <br>
+Départ: ${start} <br>Destination: ${destinations} <br>Nombre: ${numbers} <br> Tele:${tele} <br> Date et Heure:${dates} <br>  Email: ${emails} <br> Message: ${messages}
 </p>
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                     <tbody>

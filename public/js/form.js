@@ -6,6 +6,7 @@ const form = document.querySelector('form'),
    dateTime = document.querySelector('#dateTime'),
    nombre = document.querySelector('#nombre'),
    email = document.querySelector('#email');
+   message = document.querySelector('#message');
 form.addEventListener('submit', async e => {
    e.preventDefault();
    const name = nom.value,
@@ -15,6 +16,7 @@ form.addEventListener('submit', async e => {
       tele = tel.value,
       dates = dateTime.value,
       emails = email.value;
+      messages = message.value;
    try {
       await axios.post('/.netlify/functions/sendEmail', {
          name,
@@ -23,9 +25,10 @@ form.addEventListener('submit', async e => {
          tele,
          dates,
          numbers,
-         emails
+         emails,
+         messages
       });
-      nom.value = "", depart.value = "", destination.value = "", nombre.value = "", email.value = "",tel.value = ""
+      nom.value = "", depart.value = "", destination.value = "", nombre.value = "", email.value = "",tel.value = "", message.value=""
    } catch (error) {
       console.error("oups! elle y a une erreur:", error)
    }
